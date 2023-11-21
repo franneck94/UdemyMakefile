@@ -27,7 +27,7 @@ CXX_OBJECTS = $(patsubst $(SOURCE_DIR)/%.cc, $(BUILD_DIR)/%.o, $(CXX_SOURCES))
 ## TARGETS  ##
 ##############
 create:
-	mkdir build
+	@mkdir -p build
 
 build: create $(CXX_OBJECTS)
 	$(CXX_COMPILER_CALL) $(CXX_OBJECTS) $(LDFLAGS) -o $(BUILD_DIR)/$(EXECUTABLE_NAME)
